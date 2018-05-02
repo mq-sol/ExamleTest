@@ -52,7 +52,7 @@ class ExampleServiceTest extends EccubeTestCase
 
         try {
             $date = $qb->getQuery()->getSingleResult();
-            $this->expected = $date['create_date']->format('Y年m月d日 H時i分s秒');
+            $this->expected = $date['create_date']->format('m月d日 H時i分s秒');
         } catch (\NoResultException $e) {
             throw new \NoResultException();
         }
